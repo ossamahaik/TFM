@@ -1,0 +1,51 @@
+# ============================================================================
+# TFM xG · Expected Goals con Machine Learning — dependencias
+# ----------------------------------------------------------------------------
+# Instalación recomendada (paquete editable + extras):
+#     pip install -e .            # núcleo
+#     pip install -e ".[all]"     # todo (datos, boosting, notebooks, tests, bayes)
+#
+# Este requirements.txt fija RANGOS CERRADOS (límite inferior y superior) para
+# garantizar reproducibilidad: evita que una versión mayor futura altere
+# resultados o rompa la API. Para reproducir las cifras de la memoria, instalar
+# exactamente estas franjas.
+# Python >= 3.10. Recomendado: 3.11/3.12. Python 3.14 puede requerir versiones recientes de dependencias opcionales.
+# ============================================================================
+
+# --- Núcleo científico (obligatorias) ---
+numpy>=1.24,<3.0
+pandas>=2.0,<3.1
+scipy>=1.10,<2.0
+scikit-learn>=1.3,<1.9
+matplotlib>=3.7,<4.0
+seaborn>=0.12,<0.14
+joblib>=1.3,<2.0
+
+# --- Fuente de datos StatsBomb Open Data (datos reales) ---
+# Sin conexión, el proyecto usa su generador sintético integrado.
+statsbombpy>=1.11,<2.0
+pyarrow>=12.0,<25.0
+
+# ============================================================================
+# OPCIONALES — el proyecto detecta su presencia y usa alternativas nativas
+# de scikit-learn en su ausencia.
+# ============================================================================
+xgboost>=2.0,<3.0
+lightgbm>=4.0,<5.0
+shap>=0.44,<0.46
+optuna>=3.4,<4.0
+imbalanced-learn>=0.11,<0.13
+plotly>=5.18,<6.0
+
+# --- Ejecución de notebooks ---
+jupyter>=1.0,<2.0
+notebook>=7.0,<8.0
+nbconvert>=7.0,<8.0
+
+# --- Extensión avanzada: modelo jerárquico bayesiano de finalización ---
+pymc>=5.10,<6.0
+arviz>=0.17,<0.19
+
+# --- Calidad de código y pruebas ---
+pytest>=8.0,<10.0
+ruff>=0.4,<1.0

@@ -1,0 +1,3 @@
+n_bins,modelo,split,ece_uniforme,ece_cuantiles
+10,hgb_calibrado,test,0.017646192239129263,0.018718833946916293
+15,hgb_calibrado,test,0.014850196806363162,0.01816253889593477

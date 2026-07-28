@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Cachés y temporales
+.pytest_cache/
+*.log
+.DS_Store
+.cache/
+
+# Datos crudos descargados (se regeneran con run_pipeline.py)
+# Descomentar si no se desea versionar la caché local de StatsBomb:
+# data/raw/*.pkl
+# data/raw/*.parquet
+
+# Paquete instalable (build artifacts)
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Artefactos generados (se regeneran con `make pipeline`)
+# Por defecto SÍ se versionan modelos/figuras/resultados para revisión del
+# tribunal sin necesidad de re-ejecutar. Descomentar para no versionarlos:
+# artifacts/models/*.joblib
+# figures/*.png
+# data/results/*.csv
+# data/processed/*
+
+# Ruff
+.ruff_cache/

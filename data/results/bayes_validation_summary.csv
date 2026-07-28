@@ -1,0 +1,2 @@
+n_jugadores,tau_em_laplace,tau_marginal_exacta,abs_err_u_max,abs_err_u_medio,abs_err_s_max,abs_err_s_medio,abs_err_p_max,abs_err_p_medio,corr_p_laplace_exacta
+97,0.3374,0.315,0.00857,0.00464,0.00044,0.00018,0.01176,0.00622,0.9999

@@ -1,0 +1,11 @@
+,value
+n_shots,5606.0
+pearson_r,0.8373849297622539
+spearman_r,0.7851639370848862
+mae_vs_statsbomb,0.03700566844727428
+mean_bias_own_minus_sb,-0.0024582899022265797
+brier_own_model,0.07258176149831638
+brier_statsbomb,0.06790051712796519
+sum_xg_own,505.6610186251178
+sum_xg_statsbomb,519.4421918170001
+total_goals,507.0

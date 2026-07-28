@@ -1,0 +1,6 @@
+variable,n,n_ausentes,pct_ausentes
+n_defenders_in_cone,5606,0,0.0
+n_defenders_within_3m,5606,0,0.0
+distance_to_nearest_defender,5606,0,0.0
+gk_distance_to_goal,5606,1,0.018
+gk_distance_to_shot,5606,1,0.018

@@ -1,0 +1,8 @@
+hiperparametro,valor
+l2_regularization,1.6394127471631603
+learning_rate,0.01748772208717285
+max_depth,3
+max_iter,645
+max_leaf_nodes,25
+min_samples_leaf,71
+random_state,42

@@ -1,0 +1,57 @@
+# ============================================================================
+# TFM · Expected Goals (xG) con Machine Learning
+# Configuración del paquete (PEP 621). Instalación editable:  pip install -e .
+# ============================================================================
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xg"
+version = "2.0.0"
+description = "Modelo de Expected Goals (xG) para fútbol con Machine Learning (TFM en Ingeniería Matemática y Computacional)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Autor del TFM" }]
+keywords = ["expected-goals", "football-analytics", "machine-learning", "calibration", "statsbomb"]
+
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+    "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+data = ["statsbombpy>=1.11", "pyarrow>=12.0"]
+boosting = ["xgboost>=2.0", "lightgbm>=4.0"]
+interpret = ["shap>=0.44"]
+tuning = ["optuna>=3.4"]
+notebooks = ["jupyter>=1.0", "notebook>=7.0", "nbconvert>=7.0"]
+dev = ["pytest>=8.0", "ruff>=0.4"]
+# Extensión avanzada: modelo jerárquico bayesiano de finalización.
+bayes = ["pymc>=5.10", "arviz>=0.17"]
+all = [
+    "statsbombpy>=1.11", "pyarrow>=12.0", "xgboost>=2.0", "lightgbm>=4.0",
+    "shap>=0.44", "optuna>=3.4", "jupyter>=1.0", "notebook>=7.0",
+    "nbconvert>=7.0", "pytest>=8.0", "pymc>=5.10", "arviz>=0.17",
+]
+
+[project.scripts]
+xg-pipeline = "xg.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
