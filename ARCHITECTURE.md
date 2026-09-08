@@ -1,8 +1,8 @@
 # Arquitectura del proyecto
 
 Este documento describe la organización del paquete `xg` y el flujo de datos del
-pipeline. Para la guia de uso, ver `README.md`; para el contenido academico, ver
-`reports/MEMORIA_CONTENIDO.md`.
+pipeline. Para la guia de uso, ver `README.md`; para el contenido academico, la
+memoria del TFM es la referencia autoritativa.
 
 ## Organizacion del paquete (src layout)
 

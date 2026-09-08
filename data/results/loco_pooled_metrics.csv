@@ -1,0 +1,5 @@
+metrica,valor,ci_low,ci_high
+roc_auc,0.7686,0.7439,0.7901
+pr_auc,0.2984,0.2594,0.342
+brier_score,0.0728,0.068,0.0782
+log_loss,0.2652,0.2468,0.2865

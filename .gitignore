@@ -41,3 +41,11 @@ dist/
 
 # Ruff
 .ruff_cache/
+
+# Artefactos de trabajo que no deben versionarse
+*.log
+bb_top.csv
+em_top.csv
+
+# Cache de datos sinteticos: la regenera el loader con semilla fija
+data/raw/synthetic_shots_raw_n*

@@ -116,7 +116,7 @@ TFM_xG_MachineLearning/
 ├── data/   raw/ processed/ results/   Datos en cada etapa
 ├── artifacts/models/           Modelos entrenados (.joblib)
 ├── figures/                    Figuras generadas (.png)
-└── reports/                    Material para la memoria del TFM
+└── reports/                    Guia de ejecucion en Windows
 ```
 
 ## El pipeline en 9 pasos
