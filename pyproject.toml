@@ -13,7 +13,7 @@ description = "Modelo de Expected Goals (xG) para fútbol con Machine Learning (
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "Autor del TFM" }]
+authors = [{ name = "Ossama Haik El Afia", email = "ossamahaik95@gmail.com" }]
 keywords = ["expected-goals", "football-analytics", "machine-learning", "calibration", "statsbomb"]
 
 dependencies = [
