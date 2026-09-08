@@ -56,8 +56,8 @@ temporales del ZIP.
 Requiere Python >= 3.10. Para máxima reproducibilidad se recomienda Python 3.11 o 3.12. Con Python 3.14 se puede ejecutar el núcleo del proyecto, pero algunas dependencias opcionales pueden requerir versiones recientes. Se recomienda un entorno virtual.
 
 ```bash
-git clone https://github.com/ossamahaik/TFM-xG-MachineLearning.git
-cd TFM-xG-MachineLearning
+git clone https://github.com/ossamahaik/TFM.git
+cd TFM
 
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 
@@ -92,7 +92,7 @@ calibracion y el scoring contra la verdad de base sin necesidad de red.
 ## Estructura del proyecto
 
 ```
-TFM-xG-MachineLearning/
+TFM/
 ├── pyproject.toml              Paquete instalable (PEP 621) + extras
 ├── requirements.txt            Dependencias con rangos cerrados (reproducibilidad)
 ├── Makefile                    Targets de reproducibilidad
