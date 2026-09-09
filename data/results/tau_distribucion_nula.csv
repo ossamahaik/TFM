@@ -1,0 +1,14 @@
+estadistico,valor
+n_replicas,300.0
+tau_observado,0.3374
+media_nula,0.1796
+mediana_nula,0.1382
+desv_tipica_nula,0.1047
+percentil_5,0.0756
+percentil_50,0.1382
+percentil_90,0.3484
+percentil_95,0.3987
+percentil_99,0.4515
+maximo_nulo,0.5859
+replicas_que_superan_el_observado,36.0
+p_empirico,0.12

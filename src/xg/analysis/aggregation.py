@@ -168,7 +168,9 @@ def subgroup_performance(
     bands = pd.cut(
         df["distance_to_goal"],
         bins=[0, 6, 11, 16, 22, np.inf],
-        labels=["0-6 m", "6-11 m", "11-16 m", "16-22 m", ">22 m"],
+        # Unidades del sistema de coordenadas de StatsBomb (1 u ~ 0,91 m), que es la
+        # escala en la que se calcula distance_to_goal.
+        labels=["0-6 u", "6-11 u", "11-16 u", "16-22 u", ">22 u"],
     )
     groups = {
         "distancia": bands,

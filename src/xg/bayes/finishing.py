@@ -215,8 +215,13 @@ def fit_empirical_bayes(
     kappa_hat = float(np.exp(res.x))
 
     # --- Posterior Beta por jugador ---------------------------------------- #
-    a = kappa_hat * q + 1.0
-    b = kappa_hat * (1.0 - q) + 1.0
+    # El prior se ancla por su MEDIA, no por su modo: Beta(kappa*q, kappa*(1-q))
+    # tiene media exactamente q. La parametrizacion con el +1 fija en cambio el
+    # modo en q y deja la media en (kappa*q+1)/(kappa+2), estrictamente mayor que
+    # q cuando q < 1/2. Como la habilidad se mide con la media posterior, aquel
+    # prior asignaba habilidad positiva a jugadores que marcan menos que su xG.
+    a = kappa_hat * q
+    b = kappa_hat * (1.0 - q)
     a_post = a + k
     b_post = b + (n - k)
 
