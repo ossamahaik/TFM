@@ -206,6 +206,14 @@ def loco_pooled(X, y, comp, model_key):
             rows.append({"metrica": k, "valor": round(m[nombre], 4),
                          "ci_low": round(float(ci.loc[k, "ci_low"]), 4),
                          "ci_high": round(float(ci.loc[k, "ci_high"]), 4)})
+    # El ECE y la media predicha no llevan IC bootstrap, pero deben quedar en el CSV
+    # para que las cifras citadas en la memoria sean trazables a su fuente.
+    rows.append({"metrica": "ece", "valor": round(m["ece"], 4),
+                 "ci_low": "", "ci_high": ""})
+    rows.append({"metrica": "mean_pred", "valor": round(m["mean_pred"], 4),
+                 "ci_low": "", "ci_high": ""})
+    rows.append({"metrica": "base_rate", "valor": round(float(yy.mean()), 4),
+                 "ci_low": "", "ci_high": ""})
     df = pd.DataFrame(rows)
     df.attrs["n"] = len(yy)
     logger.info("  agregado: n=%d goles=%d | Brier=%.4f ECE=%.4f ROC=%.4f",

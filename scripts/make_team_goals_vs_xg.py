@@ -44,10 +44,11 @@ plt.rcParams.update({
 TEAMS_ES = {
     "Spain": "España", "England": "Inglaterra", "Germany": "Alemania",
     "France": "Francia", "Croatia": "Croacia", "Belgium": "Bélgica",
-    "Brazil": "Brasil", "Netherlands": "Países Bajos",
+    "Brazil": "Brasil", "Portugal": "Portugal", "Switzerland": "Suiza",
+    "Netherlands": "Países Bajos",
 }
 ORDER = ["Spain", "England", "Germany", "France", "Croatia", "Belgium",
-         "Brazil", "Netherlands"]
+         "Brazil", "Portugal", "Switzerland", "Netherlands"]
 
 ROOT = Path(__file__).resolve().parents[1]
 CSV = ROOT / "data" / "results" / "team_xg_ranking.csv"
